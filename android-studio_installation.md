@@ -17,7 +17,15 @@
     export ANDROID_HOME='/NOBACKUP/tmpuser-?????/android-local'
 ```
 
-3. Start the installation of Android Studio (the version of your ZIP file may be different):
+3. Restart your bash shell(s) to read the contents of `.bashrc` and make the changes take effect. To check that your enviromental variables are indeed setup correctly you can use the command.
+
+```
+    printenv | grep ANDROID
+```
+
+*(`printenv` prints all enviromental variables, `|` pipes the output to another process, in this case `grep` which is used to filter the result.)*
+
+4. Start the installation of Android Studio (the version of your ZIP file may be different):
 
 ```
     cd /NOBACKUP/tmpuser-?????
@@ -26,14 +34,14 @@
     android-studio/bin/studio.sh
 ```
 
-4. In the step "Install Type" choose "Custom".
+5. In the step "Install Type" choose "Custom".
 
-5. In the step "SDK Components Setup" make sure the Android SDK Location is set to `/NOBACKUP/tmpuser-?????/android-local`. If it is not, then your environment variables are not set up correctly.
+6. In the step "SDK Components Setup" make sure the Android SDK Location is set to `/NOBACKUP/tmpuser-?????/android-local`. If it is not, then your environment variables are not set up correctly.
 
-6. Create a new AVD by selecting Tools > Android > AVD Manager from the main Android Studio menu.
+7. Create a new AVD by selecting Tools > Android > AVD Manager from the main Android Studio menu.
    - Pick a device with a lower resolution, for example, the Nexus 4.
    - In step "System Image" select the tab "x86 Images", and choose API Level 22, ABI x86_64 (important for fast virtualization).
    - The message in "Component Installer" should say "Installing Google APIs Intel x86 Atom_64 System Image in /NOBACKUP/tmpuser-?????/android-local/system-images/android-22/google_apis/x86_64".
    - In step "Android Virtual Device (AVD)" click "Finish": this takes a few moments to complete.
 
-7. Create or import an Android project to test your new installation.
+8. Create or import an Android project to test your new installation.
