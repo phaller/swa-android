@@ -9,7 +9,7 @@
     rm -rf Android/
     ```
 
-2. Set up environment variables by adding the following lines to the file `.bashrc` in your home directory (replace `?????` with the number in your `tmpuser` name).
+2. Set up environment variables by adding the following lines to the file `.bashrc` in your home directory (replace `?????` with the number in your `tmpuser` name). The leading dot in `.bashrc` means that the file is hidden. Use `ctrl+h` in Ubuntus file explorer to toggle show hidden files, or open gedit from the command line by issuing `gedit ~/.bashrc`.
 
     ```
     export ANDROID_SDK_HOME='/NOBACKUP/tmpuser-?????/android-local'
