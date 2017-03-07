@@ -9,7 +9,7 @@
     rm -rf Android/
     ```
 
-2. Set up environment variables by adding the following lines to the file `.bashrc` in your home directory (replace `?????` with the number in your `tmpuser` name). The leading dot in `.bashrc` means that the file is hidden. Use `ctrl+h` in Ubuntus file explorer to toggle show hidden files, or open gedit from the command line by issuing `gedit ~/.bashrc`.
+2. Set up environment variables by adding the following lines to the file `.bashrc` in your home directory (replace `?????` with the number in your `tmpuser` name). The leading dot in `.bashrc` means that the file is hidden. Use `ctrl+h` in Ubuntus file explorer to toggle show hidden files, or open using gedit from the command line by issuing `gedit ~/.bashrc`.
 
     ```
     export ANDROID_SDK_HOME='/NOBACKUP/tmpuser-?????/android-local'
@@ -17,13 +17,13 @@
     export ANDROID_HOME='/NOBACKUP/tmpuser-?????/android-local'
     ```
 
-3. Restart your bash shell(s) to read the contents of `.bashrc` and make the changes take effect. To check that your enviromental variables are indeed setup correctly you can use the command.
+3. Use `source ~/.bashrc` or restart your bash shell(s) to load the contents of `.bashrc` and make the changes take effect. To check that your enviroment variables are indeed setup correctly you can use the command.
 
     ```
     printenv | grep ANDROID
     ```
 
-    *(`printenv` prints all enviromental variables, `|` pipes the output to another process, in this case `grep` which is used to filter the result.)*
+    *(`printenv` prints all enviroment variables, `|` pipes the output to another process, in this case `grep` which is used to filter the result.)*
 4. Start the installation of Android Studio (the version of your ZIP file may be different):
 
     ```
